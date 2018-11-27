@@ -1,6 +1,6 @@
 import faker from 'faker';
 
-const createFakeRowData = index => ({
+const createFakeRowData = () => ({
   firstName: faker.name.firstName(),
   lastName: faker.name.lastName(),
   email: faker.internet.email(),
@@ -16,5 +16,4 @@ const createFakeRowData = index => ({
     })
 });
 
-export default () =>
-  Array.from({ length: 2000 }, (_, index) => createFakeRowData(index));
+export default () => Array.from({ length: 2000 }, createFakeRowData);
